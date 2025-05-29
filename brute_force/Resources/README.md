@@ -10,6 +10,8 @@ Trying username: root, password: 12345678
 Trying username: root, password: qwerty
 Trying username: root, password: 123456789
 ...
+Trying username: admin, password: shadow
+Success!
 ```
 
 ## reference
