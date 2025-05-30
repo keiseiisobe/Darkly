@@ -6,6 +6,10 @@
 > 
 > see https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/hidden
 
+> Within the POST request, the tester should also make special note of any hidden form fields that are being passed to the application, as these usually contain sensitive information such as state information, quantity of items, the price of items, etc., that the developer never intended for anyone to see or change.
+>
+> see https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/06-Identify_Application_Entry_Points
+
 ## exploit
 Home -> Sign In -> I forgot my password
 
