@@ -8,6 +8,22 @@
 >
 > see [here](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/03-Review_Webserver_Metafiles_for_Information_Leakage)
 
+```
+shell % nmap -A localhost
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-05-30 14:45 +0900
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000052s latency).
+Other addresses for localhost (not scanned): ::1
+Not shown: 996 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http    nginx 1.4.6 (Ubuntu)
+|_http-title: BornToSec - Web Section
+| http-robots.txt: 2 disallowed entries 
+|_/whatever /.hidden
+|_http-server-header: nginx/1.4.6 (Ubuntu)
+```
+We can see that there are disallowed entries in robots.txt.
+
 1. access http://localhost/robots.txt.
 2. In the /whatever dir, you can get root password.
 3. apply md5 decoding.
