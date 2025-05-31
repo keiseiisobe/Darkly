@@ -1,7 +1,7 @@
 # Cross Site Scripting
-> Reflected Cross-site Scripting (XSS) occur when an attacker injects browser executable code within a single HTTP response.
+> Stored Cross-site Scripting (XSS) is the most dangerous type of Cross Site Scripting. Web applications that allow users to store data are potentially exposed to this type of attack.
 >
-> see [here](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting)
+> see [here](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting)
 
 ## vulnerability
 Home -> LEAVE A FEEDBACK
@@ -10,4 +10,4 @@ Home -> LEAVE A FEEDBACK
 2. The script may be executed in victim's browser.
 
 ## reference
-* https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting
+* https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting
